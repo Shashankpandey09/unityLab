@@ -88,3 +88,4 @@ theme="light"/>
 };
 
 export default App;
+
