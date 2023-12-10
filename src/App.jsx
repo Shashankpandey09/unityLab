@@ -13,9 +13,10 @@ const App = () => {
   useEffect(() => {
     setIsLoading(true);
     const fetchArticles = async () => {
-      const res = await fetch(`https://hn.algolia.com/api/v1/search?query=${query}`);
-      const data = await res.json();
-      console.log(data.hits);
+       fetch(`https://hn.algolia.com/api/v1/search?query=${query}`);
+  .then(response => response.json())
+  .then(data => console.log(data));
+    
       setItems(data.hits);
       setLargeTitle(data.hits[0]);
     };
