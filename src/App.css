@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+}
+body{
+  
+    background-color: black;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+form{
+    margin-bottom: 2.5rem;
+}
+input{
+    background-color: transparent;
+    padding: 1.25rem 1rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    color: slategray;
+    border: 0.1rem solid slateblue;
+    margin-right: 1rem;
+    border-radius: 0.625rem;
+
+}
+button{
+    background-color: #fff;
+    padding: 1.25rem 1rem;
+    font-size: 1.5rem;
+    outline: none;
+    border: 0.1rem solid  slategray;
+    border-radius: 0.625rem;
+    transition: all 0.15s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    background-color: transparent;
+  color: slategray;
+}
+.section{
+    padding: 1.25rem;
+}
+.title h1{
+    font-weight:bold ;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.title a{
+display: flex;
+align-items: center;
+justify-content: center;
+color: slategray;
+text-decoration: underline;
+margin-bottom: 2rem;
+}
+.title a  :hover{
+    color: #fff;
+}
+input::placeholder{
+    color: slategray;
+}
+.cards div{
+    background-color:#161f34 ;
+    padding: 1rem;
+    border-radius: 0.625rem;
+}
+.cards div h2{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.cards div ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.cards div ul li{
+    color: slategray;
+}
+.cards div ul li a{
+    color: slategray;
+    
+}
+
+.cards div p{
+    color: slategray;
+}
+.section .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.spinner{
+    width: 5rem;
+    height: 5rem;
+    border: 0.6rem solid rgb(250, 250, 250);
+    border-top-color:red ;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    position: absolute;
+    right: 48%;
+    top: 50%;
+}
+a:hover{
+    color: #fff;
+}
+li a:hover{
+    color: #fff;
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    } to{
+        transform: rotate(360deg);
+    }
+}
+
+@media(min-width:1024px){
+    input{
+        width: 100%;
+    }
+    .section{
+
+        max-width: 1280px;
+        margin: auto;
+    }
+    form{
+        display: flex;
+        align-items: center;
+    }
+}
+@media(min-width:768px){
+    .section .cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(max-width:1024px){
+    form{
+        display: flex;
+        justify-content: center;
+    }
+}
